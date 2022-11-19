@@ -17,6 +17,9 @@ jobs:
           python-version: 3.9
           cache: pip
 
+      - name: Install feed2toot
+        run: pip install -r requirements.txt
+
       - name: Run feed2toot
         run: |
           echo "$CLIENTCRED" > feed2toot_clientcred.txt
