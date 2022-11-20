@@ -27,6 +27,9 @@ jobs:
           echo "$CLIENTCRED" > feed2toot_clientcred.txt
           echo "$USERCRED" > feed2toot_usercred.txt
           feed2toot -c ./feed2toot.ini
+        env:
+          CLIENTCRED: ${{ secrets.CLIENTCRED }}
+          USERCRED: ${{ secrets.USERCRED }}
           
       - name: Add db cache to git
         run: |
