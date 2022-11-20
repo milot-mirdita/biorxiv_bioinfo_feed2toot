@@ -36,7 +36,7 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add --force feed2toot.db
-          git diff --exit-code || git commit -m "Update cached entries"
+          git diff --staged --exit-code || git commit -m "Update cached entries"
 
       - name: GitHub Push
         uses: ad-m/github-push-action@v0.6.0
